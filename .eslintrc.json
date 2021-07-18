@@ -1,12 +1,16 @@
 {
-  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "extends": ["eslint:recommended", "prettier"],
   "plugins": ["jquery"],
   "env": {
     "jquery": true,
     "browser": true,
-    "es6": true
+    "es6": true,
+    "node": true
   },
-  "globals": {},
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
   "rules": {
     "camelcase": [
       2,

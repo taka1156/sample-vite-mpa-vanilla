@@ -2,7 +2,7 @@
 const fs = require('fs').promises;
 
 const generatePathConfig = async (base = 'src/pages', output = '.') => {
-  let pathList = {};
+  const pathList = {};
   await fs
     .readdir(base)
     .then(files => {
