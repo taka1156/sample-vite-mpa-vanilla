@@ -5,6 +5,7 @@ const json = require('./path.config.json');
 
 export default defineConfig({
   root: 'src',
+  base: 'taka1156/sample-vite-mpa-vanilla',
   build: {
     rollupOptions: {
       input: {
