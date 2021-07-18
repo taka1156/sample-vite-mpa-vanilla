@@ -1,0 +1,21 @@
+{
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "plugins": ["jquery"],
+  "env": {
+    "jquery": true,
+    "browser": true,
+    "es6": true
+  },
+  "globals": {},
+  "rules": {
+    "camelcase": [
+      2,
+      {
+        "properties": "always"
+      }
+    ],
+    "quotes": [2, "single"],
+    "eqeqeq": 2,
+    "prefer-const": 2
+  }
+}
