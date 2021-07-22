@@ -1,27 +1,27 @@
-'use strict';
+const fg = require('fast-glob');
 const fs = require('fs').promises;
 
-const generatePathConfig = async (base = 'src/pages', output = '.') => {
-  const pathList = {};
-  await fs
-    .readdir(base)
-    .then(files => {
-      files.forEach(file => {
-        const fileName = file.replace('.html', '');
-        pathList[fileName] = `${base}/${file}`;
-      });
-    })
-    .catch(e => {
-      throw e;
-    });
+const generatePathConfig = async (
+  path = './src',
+  output = './path.config.json'
+) => {
+  const fileList = {};
+  const paths = fg.sync(`${path}/**/*.html`);
+
+  paths.forEach(path => {
+    const dirList = path.split('/');
+    const fileName = dirList[dirList.length - 1].replace('.html', '');
+    if (fileName === 'index' && dirList.length > 4) {
+      fileList[`${dirList[dirList.length - 2]}`] = path;
+    } else {
+      fileList[`${fileName}`] = path;
+    }
+  });
 
   await fs
-    .writeFile(
-      `${output}/path.config.json`,
-      JSON.stringify(pathList, null, '    ')
-    )
+    .writeFile(output, JSON.stringify(fileList, null, '     '))
     .then(() => {
-      console.log(pathList);
+      console.log(fileList);
     })
     .catch(e => {
       throw e;
