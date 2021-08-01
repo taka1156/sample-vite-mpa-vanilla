@@ -1,0 +1,31 @@
+/*
+    brand color
+*/
+$brands: (
+  'bc-w': whitesmoke,
+  'bc-b': cornflowerblue
+) !default;
+
+@function brand-color($bc: 'bc-w') {
+  @return map-get($brands, $bc);
+}
+
+/*
+    heading
+*/
+@for $i from 1 to 6 {
+  h#{$i} {
+    text-align: center;
+    color: brand-color('bc-b');
+  }
+}
+
+$breakpoints: (
+  mobile: 'screen and (max-width: 800px)'
+) !default;
+
+@mixin bp($device: 'mobile') {
+  @media #{map-get($breakpoints, $device)} {
+    @content;
+  }
+}

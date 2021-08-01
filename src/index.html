@@ -9,25 +9,32 @@
     <script type="module" src="./assets/js/main.js"></script>
   </head>
   <body>
-    <h1>Top</h1>
-    <nav>
-      <ul>
-        <li>
-          <a href="./index.html">Top</a>
-        </li>
-        <li>
-          <a href="./pages/profile.html">Profile</a>
-        </li>
-        <li>
-          <a href="./pages/skill.html">Skill</a>
-        </li>
-        <li>
-          <a href="./pages/portfolio.html">Portfolio</a>
-        </li>
-        <li>
-          <a href="./pages/notfound.html">Not Found</a>
-        </li>
-      </ul>
-    </nav>
+    <header>
+      <nav class="nav-box">
+        <div class="nav-bar">
+          <p class="nav-bar__logo">
+            <a href="/">Taka's Portfolio</a>
+          </p>
+          <div class="nav-bar__btn"><button id="nav-toggle">X</button></div>
+        </div>
+        <ul id="nav-list" class="nav-list" aria-expand="false">
+          <li class="nav-list__item">
+            <a href="/">Top</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./pages/profile.html">Profile</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./pages/skill.html">Skill</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./pages/portfolio.html">Portfolio</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <h1>Top</h1>
+    </main>
   </body>
 </html>

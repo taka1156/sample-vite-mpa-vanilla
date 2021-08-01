@@ -2,32 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - taka1156</title>
+    <title>Portfolio</title>
     <script type="module" src="../assets/js/main.js"></script>
   </head>
   <body>
-    <h1>Portfolio</h1>
-    <nav>
-      <ul>
-        <li>
-          <a href="../index.html">Top</a>
-        </li>
-        <li>
-          <a href="./profile.html">Profile</a>
-        </li>
-        <li>
-          <a href="./skill.html">Skill</a>
-        </li>
-        <li>
-          <a href="./portfolio.html">Portfolio</a>
-        </li>
-        <li>
-          <a href="./notfound.html">Not Found</a>
-        </li>
-      </ul>
-    </nav>
+    <header>
+      <nav class="nav-box">
+        <div class="nav-bar">
+          <p class="nav-bar__logo">
+            <a href="/">Taka's Portfolio</a>
+          </p>
+          <div class="nav-bar__btn"><button id="nav-toggle">X</button></div>
+        </div>
+        <ul id="nav-list" class="nav-list" aria-expand="false">
+          <li class="nav-list__item">
+            <a href="/">Top</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./profile.html">Profile</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./skill.html">Skill</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./portfolio.html">Portfolio</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <h1>Portfolio</h1>
+    </main>
   </body>
 </html>
