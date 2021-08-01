@@ -2,40 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile - taka1156</title>
+    <title>Profile</title>
     
-  <script type="module" crossorigin src="/sample-vite-mpa-vanilla/assets/profile.d91e5961.js"></script>
-  <link rel="modulepreload" href="/sample-vite-mpa-vanilla/assets/dynamic-import-polyfill.0e60915a.js">
-  <link rel="modulepreload" href="/sample-vite-mpa-vanilla/assets/main.48eee5bd.js">
-  <link rel="stylesheet" href="/sample-vite-mpa-vanilla/assets/main.6253c8ab.css">
+  <script type="module" crossorigin src="/sample-vite-mpa-vanilla/assets/profile.97d65f47.js"></script>
+  <link rel="modulepreload" href="/sample-vite-mpa-vanilla/assets/nav.d3c702b6.js">
+  <link rel="modulepreload" href="/sample-vite-mpa-vanilla/assets/vendor.e7ab9a7f.js">
+  <link rel="stylesheet" href="/sample-vite-mpa-vanilla/assets/nav.bbf2400a.css">
 </head>
   <body>
-    <h1>Profile</h1>
-    <nav>
-      <ul>
-        <li>
-          <a href="../index.html">Top</a>
-        </li>
-        <li>
-          <a href="./profile.html">Profile</a>
-        </li>
-        <li>
-          <a href="./skill.html">Skill</a>
-        </li>
-        <li>
-          <a href="./portfolio.html">Portfolio</a>
-        </li>
-        <li>
-          <a href="./notfound.html">Not Found</a>
-        </li>
-      </ul>
-    </nav>
+    <header>
+      <nav class="nav-box">
+        <div class="nav-bar">
+          <p class="nav-bar__logo">
+            <a href="/">Taka's Portfolio</a>
+          </p>
+          <div class="nav-bar__btn"><button id="nav-toggle">X</button></div>
+        </div>
+        <ul id="nav-list" class="nav-list" aria-expand="false">
+          <li class="nav-list__item">
+            <a href="/">Top</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./profile.html">Profile</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./skill.html">Skill</a>
+          </li>
+          <li class="nav-list__item">
+            <a href="./portfolio.html">Portfolio</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container">
+      <h1>Profile</h1>
+    </main>
   
 <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
-  <script nomodule src="/sample-vite-mpa-vanilla/assets/polyfills-legacy.b7875d93.js"></script>
-  <script nomodule id="vite-legacy-entry" data-src="/sample-vite-mpa-vanilla/assets/profile-legacy.fad43d56.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+  <script nomodule src="/sample-vite-mpa-vanilla/assets/polyfills-legacy.bf7c0ad5.js"></script>
+  <script nomodule id="vite-legacy-entry" data-src="/sample-vite-mpa-vanilla/assets/profile-legacy.0d93721f.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
 </body>
 </html>
