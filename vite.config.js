@@ -6,7 +6,7 @@ import { viteMpaPlugin } from './plugin/mpa';
 export default defineConfig(({ mode }) => {
   return {
     root: 'src',
-    base: mode !== 'serve' ? '/sample-vite-mpa-vanilla/' : './',
+    base: mode !== 'development' ? '/sample-vite-mpa-vanilla/' : './',
     build: {
       outDir: '../docs',
       emptyOutDir: true
