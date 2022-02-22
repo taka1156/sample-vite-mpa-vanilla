@@ -1,0 +1,40 @@
+.card {
+  margin: 0 auto;
+  width: 60%;
+  position: relative;
+  border: 0.5px solid gray;
+  @include bp() {
+    width: 100%;
+  }
+  &__header {
+    border: 0.5px solid gray;
+    height: 10%;
+    box-sizing: border-box;
+  }
+  &__body {
+    border: 0.5px solid gray;
+    height: 80%;
+    box-sizing: border-box;
+  }
+  &__footer {
+    bottom: 0;
+    position: absolute;
+    border: 0.5px solid gray;
+    width: 100%;
+    height: 10%;
+    box-sizing: border-box;
+  }
+}
+
+.star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  &__bright {
+    color: goldenrod;
+  }
+  &__dim {
+    color: dimgray;
+  }
+}

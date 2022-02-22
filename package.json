@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite src/",
-    "build": "yarn route:gen && vite build --emptyOutDir",
+    "build": "vite build",
     "serve": "vite preview src/",
-    "route:gen": "node buildHelper/index.js",
     "lint": "eslint --ext .js, . --fix && stylelint \"**/*.scss\" --fix && yarn prettier --write \"**/*.{js, scss}\""
   },
   "devDependencies": {
@@ -13,6 +12,7 @@
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jquery": "^1.5.1",
+    "fast-glob": "^3.2.11",
     "prettier": "^2.3.2",
     "sass": "^1.35.2",
     "stylelint": "^13.13.1",

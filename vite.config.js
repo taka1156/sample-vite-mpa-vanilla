@@ -1,30 +1,27 @@
 import { defineConfig } from 'vite';
-import path from 'path';
+import { resolve } from 'path';
 import legacy from '@vitejs/plugin-legacy';
-const json = require('./path.config.json');
+import { viteMpaPlugin } from './plugin/mpa';
 
-export default defineConfig({
-  root: 'src',
-  base:
-    process.env.NODE_ENV === 'production' ? '/sample-vite-mpa-vanilla/' : './',
-  build: {
-    rollupOptions: {
-      input: {
-        index: path.resolve(__dirname, 'src/index.html'),
-        ...json
+export default defineConfig(({ mode }) => {
+  return {
+    root: 'src',
+    base: mode !== 'serve' ? '/sample-vite-mpa-vanilla/' : './',
+    build: {
+      outDir: '../docs',
+      emptyOutDir: true
+    },
+    resolve: {
+      alias: {
+        '@': resolve(__dirname, './src')
       }
     },
-    outDir: '../docs'
-  },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src')
-    }
-  },
-  plugins: [
-    legacy({
-      targets: ['ie >= 11'],
-      additionalLegacyPolyfills: ['regenerator-runtime/runtime']
-    })
-  ]
+    plugins: [
+      legacy({
+        targets: ['ie >= 11'],
+        additionalLegacyPolyfills: ['regenerator-runtime/runtime']
+      }),
+      viteMpaPlugin
+    ]
+  };
 });

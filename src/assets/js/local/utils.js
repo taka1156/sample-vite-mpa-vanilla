@@ -1,4 +1,11 @@
 /**
+ * jQueryから受け取ったものをBooleanとして返す。
+ */
+const toBoolean = str => {
+  return JSON.parse(str);
+};
+
+/**
  * console.logを可変長引数対応
  */
 const dump = {
@@ -13,4 +20,4 @@ const dump = {
   }
 };
 
-export { dump };
+export default { dump, toBoolean };

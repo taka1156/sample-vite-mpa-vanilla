@@ -17,6 +17,8 @@ $brands: (
   h#{$i} {
     text-align: center;
     color: brand-color('bc-b');
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -27,5 +29,28 @@ $breakpoints: (
 @mixin bp($device: 'mobile') {
   @media #{map-get($breakpoints, $device)} {
     @content;
+  }
+}
+
+.col-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+@for $i from 1 to 6 {
+  .col-#{$i} {
+    display: grid;
+    grid-template-columns: repeat($i, 1fr);
+    gap: 15px;
+    @include bp() {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.img {
+  &__fill {
+    width: 100%;
   }
 }
