@@ -1,0 +1,1 @@
+# sample-vite-mpa-vanilla
